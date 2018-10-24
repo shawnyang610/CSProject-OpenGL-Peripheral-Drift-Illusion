@@ -7,7 +7,7 @@
 #include <GLUT/glut.h>
 #include <cmath>
 
-static GLfloat SHIELD[4][3] ={{-5,10,0},{5,10,0},{5,-10,0},{-5,-10,0}};
+static GLfloat SHIELD[4][3]={{-5,10,0},{5,10,0},{5,-10,0},{-5,-10,0}};
 static GLfloat COLOR[3] ={0.15,0.39,0.77};
 GLfloat frame[4][3];
 
@@ -57,9 +57,9 @@ void draw_frame_and_shield(bool isFlipped){
 void draw_ring(bool isFlipped){
   for (int i=0; i<360; i+=45){
     glPushMatrix();
-    glScaled(1.2, 1.2, 1);
+    glScaled(1.6, 1.6, 1);
     glRotated(i, 0, 0, 1);
-    glTranslated(0, 50, 0);
+    glTranslated(0, 35, 0);
     draw_frame_and_shield(isFlipped);
     glPopMatrix();
   }
